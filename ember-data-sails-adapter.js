@@ -70,7 +70,7 @@ DS.SailsSocketAdapter = DS.SailsAdapter = DS.SailsRESTAdapter.extend({
 
 
   ajax: function(url, method, data) {
-    return this.socket(url, method, data);
+    return this.socket(url, method, data.data);
   },
 
   socket: function(url, method, data) {

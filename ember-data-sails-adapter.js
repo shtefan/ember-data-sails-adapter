@@ -70,8 +70,7 @@ DS.SailsSocketAdapter = DS.SailsAdapter = DS.SailsRESTAdapter.extend({
 
 
   ajax: function(url, method, data) {
-    console.log('======', typeof data);
-    if(typeof data !== 'undefined' && typeof data.data !== 'undefined'){
+    if(typeof data !== 'undefined'){
       return this.socket(url, method, data.data);
     }else{
       return this.socket(url, method);
